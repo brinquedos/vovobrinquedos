@@ -99,14 +99,14 @@
   <form id="formulario">
     <label>Nome: <input type="text" id="nome" required></label>
     <label>Endereço: <input type="text" id="endereco"></label>
-    <label>CPF: <input type="text" id="cpf"></label>
+    <label>CPF: <input type="number" id="cpf"></label>
     <label>Telefone: <input type="tel" id="telefone"></label>
     <label>E-mail: <input type="email" id="email"></label>
     <label>Data: <input type="date" id="data" required></label>
     <label>Horário de Início: <input type="time" id="inicio" required></label>
     <label>Horário de Desmontagem: <input type="time" id="fim" required></label>
-    <label>Sinal Pago: <input type="text" id="pago"></label>
-    <label>Valor Restante: <input type="text" id="restante"></label>
+    <label>Sinal Pago: <input type="number" id="pago"></label>
+    <label>Valor Restante: <input type="number" id="restante"></label>
     <label>OBS: <textarea id="obs" rows="4"></textarea></label>
 
     <div class="checkbox-group">
@@ -271,7 +271,7 @@ document.getElementById("escorregadorCheckbox").addEventListener("change", funct
       let y = 10;
       let linhaAltura = 5;
 
-      doc.text(`Contrato de Prestação de Serviço`, doc.internal.pageSize.getWidth() / 2, y, { align: "center" }); y += 12;
+      doc.text(`Contrato de Locação - Vovô Brinquedos`, doc.internal.pageSize.getWidth() / 2, y, { align: "center" }); y += 12;
       doc.setFont("helvetica", "normal");
       doc.setFontSize(10);
       doc.text(`LOCADOR: Rodrigo Aparecido Duarte, brasileiro, portador do CPF: 329.086.568-17`, 10, y); y += linhaAltura;
@@ -279,7 +279,7 @@ document.getElementById("escorregadorCheckbox").addEventListener("change", funct
       doc.text(`E-mail: ${email}	Telefone: ${telefone}`, 10, y); y += linhaAltura;
       doc.text(`Residente e domiciliado na: ${endereco}`, 10, y); y += linhaAltura;
       doc.text(`As partes acima identificadas têm, entre si, justas e acertadas o presente contrato de locação para a`, 10, y); y += linhaAltura;
-      doc.text(`Data: ${dataExtenso} com início às ${inicio} e desmontagem às ${fim}`, 10, y); y += linhaAltura;
+      doc.text(`data de  ${dataExtenso} com início às ${inicio} hrs e desmontagem às ${fim} hrs`, 10, y); y += linhaAltura;
       doc.text(`Recebi a quantia de R$: ${pago} referente ao SINAL DE RESERVA, Restando a quantia de R$: ${restante} `, 10, y); y += linhaAltura;
       doc.text(`a ser pago até a data do evento em espécie, pix ou cartão, para o aluguel dos seguintes`, 10, y); y += linhaAltura;
 
@@ -333,7 +333,7 @@ doc.setFont("helvetica", "bolditalic");
         month: "long",
         year: "numeric"
       });
-
+      doc.text(`De acordo,`, 10, y); y += 6;
       doc.setFont("helvetica", "italic");
       doc.text(`São Paulo, ${dataAtualExtenso}`, 10, y); y += 20;
 
