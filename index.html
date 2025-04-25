@@ -279,8 +279,8 @@ document.getElementById("escorregadorCheckbox").addEventListener("change", funct
       doc.text(`E-mail: ${email}	Telefone: ${telefone}`, 10, y); y += linhaAltura;
       doc.text(`Residente e domiciliado na: ${endereco}`, 10, y); y += linhaAltura;
       doc.text(`As partes acima identificadas têm, entre si, justas e acertadas o presente contrato de locação para a`, 10, y); y += linhaAltura;
-      doc.text(`data de  ${dataExtenso} com início às ${inicio} hrs e desmontagem às ${fim} hrs`, 10, y); y += linhaAltura;
-      doc.text(`Recebi a quantia de R$: ${pago} referente ao SINAL DE RESERVA, Restando a quantia de R$: ${restante} `, 10, y); y += linhaAltura;
+      doc.text(`data de ${dataExtenso} com início às ${inicio} hrs e desmontagem às ${fim} hrs`, 10, y); y += linhaAltura;
+      doc.text(`Recebi a quantia de R$ ${pago} referente ao SINAL DE RESERVA, Restando a quantia de R$ ${restante} `, 10, y); y += linhaAltura;
       doc.text(`a ser pago até a data do evento em espécie, pix ou cartão, para o aluguel dos seguintes`, 10, y); y += linhaAltura;
 
       if (itensSelecionados.length > 0) {
